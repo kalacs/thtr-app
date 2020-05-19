@@ -1,0 +1,8 @@
+{
+  "name": "nstreamer",
+  "version": "0.0.0",
+  "description": "Streaming content from ncore",
+  "main": "index.js",
+  "author": "Zoltan Kakuk",
+  "license": "MIT"
+}
