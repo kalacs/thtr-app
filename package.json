@@ -3,6 +3,15 @@
   "version": "0.0.0",
   "description": "Streaming content from ncore",
   "main": "index.js",
+  "bin": "index.js",
+  "pkg": {
+    "assets": [
+      "node_modules/nflix/build/**/*"
+    ]
+  },
+  "scripts": {
+    "packing": "pkg --target host ."
+  },
   "author": "Zoltan Kakuk",
   "license": "MIT",
   "dependencies": {
@@ -10,5 +19,7 @@
     "nflix": "git+https://gitlab+deploy-token-174569:m3aL95hkqZ4cnd-vJsvy@gitlab.com/kalacs/nflix#master",
     "webtorrent-api": "git+https://gitlab+deploy-token-174568:xRLcjizDkyK4yiuXgfB7@gitlab.com/kalacs/webtorrent-client-api#master"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "pkg": "^4.4.8"
+  }
 }
