@@ -4,5 +4,11 @@
   "description": "Streaming content from ncore",
   "main": "index.js",
   "author": "Zoltan Kakuk",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^5.2.0",
+    "nflix": "git+https://gitlab+deploy-token-174569:m3aL95hkqZ4cnd-vJsvy@gitlab.com/kalacs/nflix#master",
+    "webtorrent-api": "git+https://gitlab+deploy-token-174568:xRLcjizDkyK4yiuXgfB7@gitlab.com/kalacs/webtorrent-client-api#master"
+  },
+  "devDependencies": {}
 }
