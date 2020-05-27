@@ -1842,8 +1842,8 @@ next-event@^1.0.0:
   integrity sha1-53eKzeLlWALgrRh5w5z2917aYdg=
 
 "nflix@git+https://gitlab+deploy-token-174569:m3aL95hkqZ4cnd-vJsvy@gitlab.com/kalacs/nflix#master":
-  version "0.4.1"
-  resolved "git+https://gitlab+deploy-token-174569:m3aL95hkqZ4cnd-vJsvy@gitlab.com/kalacs/nflix#5abe43eac535f42ed31adc24f05269df0e8496fe"
+  version "0.4.2"
+  resolved "git+https://gitlab+deploy-token-174569:m3aL95hkqZ4cnd-vJsvy@gitlab.com/kalacs/nflix#e8bb0555785545c82e5044d582083085b2863856"
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.28"
     "@fortawesome/free-brands-svg-icons" "^5.13.0"
@@ -3185,8 +3185,8 @@ videostream@^3.2.0:
     range-slice-stream "^2.0.0"
 
 "webtorrent-api@git+https://gitlab+deploy-token-174568:xRLcjizDkyK4yiuXgfB7@gitlab.com/kalacs/webtorrent-client-api#master":
-  version "0.3.3"
-  resolved "git+https://gitlab+deploy-token-174568:xRLcjizDkyK4yiuXgfB7@gitlab.com/kalacs/webtorrent-client-api#3cde5512da41a4134a1fc2222fdc0d52d0e5f4af"
+  version "0.3.6"
+  resolved "git+https://gitlab+deploy-token-174568:xRLcjizDkyK4yiuXgfB7@gitlab.com/kalacs/webtorrent-client-api#452692d794374941142d87a7fbbae97a27f04bdd"
   dependencies:
     async "^3.2.0"
     debug "^4.1.1"
