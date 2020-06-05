@@ -1840,8 +1840,8 @@ next-event@^1.0.0:
   integrity sha1-53eKzeLlWALgrRh5w5z2917aYdg=
 
 "nflix@git+https://gitlab+deploy-token-174569:m3aL95hkqZ4cnd-vJsvy@gitlab.com/kalacs/nflix#master":
-  version "0.5.0"
-  resolved "git+https://gitlab+deploy-token-174569:m3aL95hkqZ4cnd-vJsvy@gitlab.com/kalacs/nflix#397f9ed346a5b92a66373bffee46bd4f8d15ef2f"
+  version "0.5.1"
+  resolved "git+https://gitlab+deploy-token-174569:m3aL95hkqZ4cnd-vJsvy@gitlab.com/kalacs/nflix#0110f90633688c66b6b21a560d0c6fb13d95f93b"
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.28"
     "@fortawesome/free-brands-svg-icons" "^5.13.0"
