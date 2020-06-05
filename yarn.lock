@@ -3183,8 +3183,8 @@ videostream@^3.2.1:
     range-slice-stream "^2.0.0"
 
 "webtorrent-api@git+https://gitlab+deploy-token-174568:xRLcjizDkyK4yiuXgfB7@gitlab.com/kalacs/webtorrent-client-api#master":
-  version "0.5.1"
-  resolved "git+https://gitlab+deploy-token-174568:xRLcjizDkyK4yiuXgfB7@gitlab.com/kalacs/webtorrent-client-api#6ea5d3d88a02ba4191d3a7472292931548fd3a47"
+  version "0.5.2"
+  resolved "git+https://gitlab+deploy-token-174568:xRLcjizDkyK4yiuXgfB7@gitlab.com/kalacs/webtorrent-client-api#7923ced9f96910580cc48deddf919cc7a4ea4cd4"
   dependencies:
     async "^3.2.0"
     debug "^4.1.1"
