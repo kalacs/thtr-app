@@ -12,5 +12,6 @@ process.on("SIGTERM", shutdown);
 async function shutdown() {
   await frontendApp.stop();
   await app.stop();
+  process.exit(0);
   console.log("Bye");
 }
