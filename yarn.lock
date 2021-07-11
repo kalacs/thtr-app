@@ -2024,9 +2024,9 @@ multistream@^4.0.0:
   dependencies:
     readable-stream "^3.4.0"
 
-"ncore-scraper@git+https://gitlab+deploy-token-173458:wLcXfJfheM9__-rAQy8d@gitlab.com/kalacs/ncore-scraper#master":
-  version "0.3.0"
-  resolved "git+https://gitlab+deploy-token-173458:wLcXfJfheM9__-rAQy8d@gitlab.com/kalacs/ncore-scraper#630d3b66fd0cbf19536938737d634e8a1da5258d"
+"ncore-scraper@git+ssh://git@github.com:kalacs/ncore-scraper2.git#v0.3.1":
+  version "0.3.1"
+  resolved "git+ssh://git@github.com:kalacs/ncore-scraper2.git#511d1d638da4291acff89e3fa408584e04d96c3b"
   dependencies:
     dotenv "^8.2.0"
     fastify "^2.13.0"
@@ -2051,32 +2051,6 @@ next-event@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/next-event/-/next-event-1.0.0.tgz#e7778acde2e55802e0ad1879c39cf6f75eda61d8"
   integrity sha1-53eKzeLlWALgrRh5w5z2917aYdg=
-
-"nflix@git+https://gitlab+deploy-token-174569:m3aL95hkqZ4cnd-vJsvy@gitlab.com/kalacs/nflix#master":
-  version "0.6.0"
-  resolved "git+https://gitlab+deploy-token-174569:m3aL95hkqZ4cnd-vJsvy@gitlab.com/kalacs/nflix#c8615fd2b0e77eefedf21de2e540dad5a07f0283"
-  dependencies:
-    "@fortawesome/fontawesome-svg-core" "^1.2.28"
-    "@fortawesome/free-brands-svg-icons" "^5.13.0"
-    "@fortawesome/free-solid-svg-icons" "^5.13.0"
-    "@fortawesome/react-fontawesome" "^0.1.9"
-    "@material-ui/core" "^4.10.2"
-    "@material-ui/icons" "^4.9.1"
-    "@material-ui/lab" "^4.0.0-alpha.56"
-    autodux "^5.0.3"
-    classnames "^2.2.6"
-    micro "^9.3.4"
-    microrouter "^3.1.3"
-    preact "^10.3.2"
-    preact-render-to-string "^5.1.4"
-    react-player "^2.0.1"
-    react-redux "^7.2.0"
-    react-router-dom "^5.2.0"
-    recompose "^0.30.0"
-    redux "^4.0.5"
-    redux-saga "^1.1.3"
-    reselect "^4.0.0"
-    serve-handler "^6.1.2"
 
 node-fetch@^1.0.1:
   version "1.7.3"
@@ -3116,6 +3090,52 @@ through@2:
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
   integrity sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
 
+"thtr-backend@git+ssh://git@github.com:kalacs/thtr-backend.git#v0.7.0":
+  version "0.7.0"
+  resolved "git+ssh://git@github.com:kalacs/thtr-backend.git#ff52e41c935140b5b675d80da0cdc8752260de56"
+  dependencies:
+    async "^3.2.0"
+    debug "^4.1.1"
+    deepmerge "^4.2.2"
+    dlnacasts "^0.1.0"
+    dotenv "^8.2.0"
+    fastify "^2.13.0"
+    fastify-cors "^3.0.3"
+    globby "^11.0.0"
+    mime "^2.4.6"
+    ncore-scraper "git+ssh://git@github.com:kalacs/ncore-scraper2.git#v0.3.1"
+    p-event "^4.1.0"
+    pump "^3.0.0"
+    range-parser "^1.2.1"
+    unordered-array-remove "^1.0.2"
+    webtorrent "^0.108.3"
+
+"thtr-frontend-preact@git+ssh://git@github.com:kalacs/thtr-frontend-preact#v0.7.0":
+  version "0.7.0"
+  resolved "git+ssh://git@github.com:kalacs/thtr-frontend-preact#b4ebe7ff314b86f7bb5efd8baccaada3f07a6f94"
+  dependencies:
+    "@fortawesome/fontawesome-svg-core" "^1.2.28"
+    "@fortawesome/free-brands-svg-icons" "^5.13.0"
+    "@fortawesome/free-solid-svg-icons" "^5.13.0"
+    "@fortawesome/react-fontawesome" "^0.1.9"
+    "@material-ui/core" "^4.10.2"
+    "@material-ui/icons" "^4.9.1"
+    "@material-ui/lab" "^4.0.0-alpha.56"
+    autodux "^5.0.3"
+    classnames "^2.2.6"
+    micro "^9.3.4"
+    microrouter "^3.1.3"
+    preact "^10.3.2"
+    preact-render-to-string "^5.1.4"
+    react-player "^2.0.1"
+    react-redux "^7.2.0"
+    react-router-dom "^5.2.0"
+    recompose "^0.30.0"
+    redux "^4.0.5"
+    redux-saga "^1.1.3"
+    reselect "^4.0.0"
+    serve-handler "^6.1.2"
+
 thunky@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/thunky/-/thunky-0.1.0.tgz#bf30146824e2b6e67b0f2d7a4ac8beb26908684e"
@@ -3406,26 +3426,6 @@ videostream@^3.2.1:
     mp4-stream "^3.0.0"
     pump "^3.0.0"
     range-slice-stream "^2.0.0"
-
-"webtorrent-api@git+https://gitlab+deploy-token-174568:xRLcjizDkyK4yiuXgfB7@gitlab.com/kalacs/webtorrent-client-api#master":
-  version "0.6.1"
-  resolved "git+https://gitlab+deploy-token-174568:xRLcjizDkyK4yiuXgfB7@gitlab.com/kalacs/webtorrent-client-api#5685ff77cc825b564f7cf050195a77eec599ac17"
-  dependencies:
-    async "^3.2.0"
-    debug "^4.1.1"
-    deepmerge "^4.2.2"
-    dlnacasts "^0.1.0"
-    dotenv "^8.2.0"
-    fastify "^2.13.0"
-    fastify-cors "^3.0.3"
-    globby "^11.0.0"
-    mime "^2.4.6"
-    ncore-scraper "git+https://gitlab+deploy-token-173458:wLcXfJfheM9__-rAQy8d@gitlab.com/kalacs/ncore-scraper#master"
-    p-event "^4.1.0"
-    pump "^3.0.0"
-    range-parser "^1.2.1"
-    unordered-array-remove "^1.0.2"
-    webtorrent "^0.108.3"
 
 webtorrent@^0.108.3:
   version "0.108.6"

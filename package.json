@@ -10,14 +10,15 @@
     ]
   },
   "scripts": {
-    "packing": "pkg --target host ."
+    "packing": "pkg --target host .",
+    "postinstall": "cd node_modules/thtr-frontend-preact && yarn && yarn build"
   },
   "author": "Zoltan Kakuk",
   "license": "MIT",
   "dependencies": {
     "concurrently": "^5.2.0",
-    "nflix": "git+https://gitlab+deploy-token-174569:m3aL95hkqZ4cnd-vJsvy@gitlab.com/kalacs/nflix#master",
-    "webtorrent-api": "git+https://gitlab+deploy-token-174568:xRLcjizDkyK4yiuXgfB7@gitlab.com/kalacs/webtorrent-client-api#master"
+    "thtr-frontend-preact": "git+ssh://git@github.com:kalacs/thtr-frontend-preact#v0.7.0",
+    "thtr-backend": "git+ssh://git@github.com:kalacs/thtr-backend.git#v0.7.0"
   },
   "devDependencies": {
     "pkg": "^4.4.8"
