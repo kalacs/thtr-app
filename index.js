@@ -1,9 +1,8 @@
-const makeFrontendApp = require("nflix");
-const makeApplication = require("webtorrent-api");
+const makeFrontendApp = require("thtr-frontend-preact");
+const makeApplication = require("thtr-backend");
 const appConfig = require(process.argv[2]);
-
-const frontendApp = makeFrontendApp(appConfig["nflix"]);
-const app = makeApplication(appConfig["webtorrent-api"]);
+const frontendApp = makeFrontendApp(appConfig["frontend"]);
+const app = makeApplication(appConfig["backend"]);
 Promise.all([app.start(), frontendApp.start()]);
 
 process.on("SIGINT", shutdown);
@@ -13,5 +12,4 @@ async function shutdown() {
   await frontendApp.stop();
   await app.stop();
   process.exit(0);
-  console.log("Bye");
 }
