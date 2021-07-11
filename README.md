@@ -61,3 +61,12 @@ It makes the starting process a bit easier.
 - Start streaming platform: `node index.js ./config.json`
 - Show DLNA logs: `export DEBUG=torrent:dlnacast`
 - Build binary: `npm run packing`
+
+## Frontend
+
+### Buttons
+
+- Red button (1 key): Refreshes the current page
+- Green button (2 key): Changes the current version of the movie (default is FullHD Eng)
+- Back button (backspace key): Goes back to the previous page
+- Navigation buttons (arrow keys): Navigate through movie list
