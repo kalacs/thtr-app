@@ -1,46 +1,56 @@
+## What
+
+This application starts the streaming platform by creating both a backend and a frontend instance.
+
+## Why
+
+It makes the starting process a bit easier.
+
 ## Requirements
 
 - ethernet connection with `192.168.0` subnet
-- Ncore passhash (Passhash generated when "lower security" is checked)
+- Ncore passhash (The passhash is sent with Cookies when "lower security" is used)
 - theMovieDB api key (https://www.themoviedb.org/account/signup?language=en-US)
-
-## Install
-
-Burn image with etcher (https://www.balena.io/etcher/)
+- yarn installed globally
 
 ## Configuration
 
-Config file: `/home/pi/nstreamer/config.json`:
-
 ```
 {
-  "webtorrent-api": {
-    "scraper": {
-      "username": "<ncore_username>",
-      "password": "<ncore_passhash>",
-      "type": "ncore"
+  "backend": {
+    "torrentProviderService": {
+      "username": "<NCORE_USER>",
+      "password": "<NCORE_PASSHASH>",
+      "type": "ncore",
+      "url": "https://ncore.pro"
     },
-    "torrentClient": {
+    "torrentClientService": {
       "downloadFolder": "downloads",
       "torrentFolder": "torrentFiles",
-      "streamPort": 8888
+      "streamServer": {
+        "network": {
+          "interface": "en0"
+        }
+      }
     },
-    "backend": {
-      "host": "192.168.0.172",
-      "port": 3000
-    },
-    "cors": { "origin": ["http://192.168.0.172:3003"] }
+    "apiService": {
+      "network": {
+        "interface": "en0"
+      },
+      "cors": { "origin": ["http://192.168.0.125:3003"] } // frontend.backend host:port
+    }
   },
-  "nflix": {
+  "frontend": {
     "frontend": {
-      "scraperUrl": "http://192.168.0.172:3000/scraper",
-      "torrentsUrl": "http://192.168.0.172:3000/torrents",
+      "scraperUrl": "http://192.168.0.125:3000/scraper", // backend host:port
+      "torrentsUrl": "http://192.168.0.125:3000/torrents", // backend host:port
       "movieAPIUrl": "https://api.themoviedb.org/3/",
-      "movieAPIKey": "<moviedb_apikey>"
+      "movieAPIKey": "<API_KEY>", //9f1ffd64abd4bde18614fd9087d87d71
+      "playMode": "on-tv" // on-tv || on-device
     },
     "backend": {
       "port": 3003,
-      "host": "192.168.0.172"
+      "host": "192.168.0.125"
     }
   }
 }
@@ -48,8 +58,6 @@ Config file: `/home/pi/nstreamer/config.json`:
 
 ## Useful commands
 
-- Restart(stop & start) service:
-  1. `sudo systemctl stop nstreamer`
-  2. `sudo systemctl start nstreamer`
-- SSH into raspberry: `ssh pi@raspberrypi.local` (default password:`Q1w2e3r4`)
-- Show log:`journalctl -f -u nstreamer`
+- Start streaming platform: `node index.js ./config.json`
+- Show DLNA logs: `export DEBUG=torrent:dlnacast`
+- Build binary: `npm run packing`

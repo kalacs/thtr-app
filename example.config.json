@@ -1,5 +1,5 @@
 {
-  "webtorrent-api": {
+  "backend": {
     "torrentProviderService": {
       "username": "",
       "password": "",
@@ -25,7 +25,7 @@
       "cors": { "origin": [] }
     }
   },
-  "nflix": {
+  "frontend": {
     "frontend": {
       "scraperUrl": "http://192.168.0.124:3000/scraper",
       "torrentsUrl": "http://192.168.0.124:3000/torrents",
