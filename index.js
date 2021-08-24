@@ -1,6 +1,8 @@
 const makeFrontendApp = require("thtr-frontend-preact");
 const makeApplication = require("thtr-backend");
-const appConfig = require(process.argv[2]);
+const sanitizeConfig = require("./utils/sanitize-config");
+const appConfig = sanitizeConfig(require(process.argv[2]));
+console.log(JSON.stringify(appConfig.backend));
 const frontendApp = makeFrontendApp(appConfig["frontend"]);
 const app = makeApplication(appConfig["backend"]);
 Promise.all([app.start(), frontendApp.start()]);

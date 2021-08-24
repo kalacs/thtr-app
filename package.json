@@ -1,6 +1,6 @@
 {
   "name": "nstreamer",
-  "version": "0.6.2",
+  "version": "0.7.0",
   "description": "Streaming content from ncore",
   "main": "index.js",
   "bin": "index.js",
@@ -11,14 +11,15 @@
   },
   "scripts": {
     "packing": "pkg --target host .",
-    "postinstall": "cd node_modules/thtr-frontend-preact && yarn && yarn build"
+    "postinstall": "cd node_modules/thtr-frontend-preact && npm i && npm run build"
   },
   "author": "Zoltan Kakuk",
   "license": "MIT",
   "dependencies": {
     "concurrently": "^5.2.0",
-    "thtr-frontend-preact": "git+ssh://git@github.com:kalacs/thtr-frontend-preact#v0.7.0",
-    "thtr-backend": "git+ssh://git@github.com:kalacs/thtr-backend.git#v0.7.0"
+    "deepmerge": "^4.2.2",
+    "thtr-backend": "git+ssh://git@github.com/kalacs/thtr-backend.git#latest",
+    "thtr-frontend-preact": "git+ssh://git@github.com:kalacs/thtr-frontend-preact#latest"
   },
   "devDependencies": {
     "pkg": "^4.4.8"
